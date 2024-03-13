@@ -7,10 +7,10 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/app_title"
+        android:id="@+id/countView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="empty"
+        android:text="0"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_title" />
+        app:layout_constraintTop_toBottomOf="@+id/countView" />
 
     <Button
         android:id="@+id/buttonSetName"
@@ -36,14 +36,14 @@
         android:layout_height="wrap_content"
         android:onClick="buttonSetName"
         android:text="Установить имя"
-        app:layout_constraintBottom_toTopOf="@+id/app_title"
+        app:layout_constraintBottom_toTopOf="@+id/countView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.774" />
 
     <TextView
-        android:id="@+id/NameView"
+        android:id="@+id/nameView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Привет, Аноним!"
@@ -63,6 +63,6 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonSetName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NameView" />
+        app:layout_constraintTop_toBottomOf="@+id/nameView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

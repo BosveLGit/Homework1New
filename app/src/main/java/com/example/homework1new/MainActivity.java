@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     public int CountNum = 0;
     public MyViewModel model;
     TextView nameView;
-    TextView app_title;
+    TextView countView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         model = new ViewModelProvider(this).get(MyViewModel.class);
-        nameView = findViewById(R.id.NameView);
-        app_title = findViewById(R.id.app_title);
+        nameView = findViewById(R.id.nameView);
+        countView = findViewById(R.id.countView);
 
         model.getUserName().observe(this, new Observer<String>() {
             @Override
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         model.getCountNum().observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(Integer num) {
-                app_title.setText(String.valueOf(num));
+                countView.setText(String.valueOf(num));
             }
         });
 
